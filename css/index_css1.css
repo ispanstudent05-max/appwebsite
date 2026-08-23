@@ -1,0 +1,619 @@
+/* 手機 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header */
+.header {
+  height: 100px;
+  background-color: #2D4C47;
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo a{
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: block;
+  color: white;
+}
+
+.main-nav {
+  display: none;
+}
+
+.primary-nav {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  
+}
+
+.primary-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 第一區塊 */
+.hero {
+  padding: 80px 0;
+  background-color: #FFFAEB;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+.hero-content-right {
+  width: 100%;
+  height: 300px;
+  background-color: #00ffd5;
+  /* 防止圖片超出 */
+  overflow: hidden;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.hero-btn button {
+  padding: 12px 20px;
+}
+
+/* 情境式 */
+
+.story {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+.story-text {
+  margin-bottom: 40px;
+}
+
+
+/* 圖片 */
+
+/* 負責卡片外觀 */
+.story-card {
+  background-color: #FFF0C2;
+  width: 100%;
+  min-height: 500px;
+  border-radius: 20px;
+  /* border: 1px solid #333; */
+  padding: 24px;
+}
+
+/* 負責把切頁開關藏起來 */
+.story-card input[type="radio"]{
+  display: none;
+}
+
+
+
+
+/* 圖片框 */
+.story-mockup {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* 負責每一頁排列 */
+.story-page {
+  flex-direction: column;
+  gap:32px;
+  display: none;
+
+  width: 100%;
+}
+
+/* step1~8 */
+#step1:checked ~ .page-1 {
+  display: flex;
+}
+#step2:checked ~ .page-2 {
+  display: flex;
+}
+#step3:checked ~ .page-3 {
+  display: flex;
+}
+#step4:checked ~ .page-4 {
+  display: flex;
+}
+#step5:checked ~ .page-5 {
+  display: flex;
+}
+#step6:checked ~ .page-6 {
+  display: flex;
+}
+#step7a:checked ~ .page-7a {
+  display: flex;
+}
+#step7b:checked ~ .page-7b {
+  display: flex;
+}
+#step8:checked ~ .page-8 {
+  display: flex;
+}
+
+.story-pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+  justify-content: flex-start;
+}
+
+.story-pagination label {
+  display: block;
+  width: 10px;
+  height: 10px;
+  /* 元素存在，只是背景變透明 */
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 50%;
+  /* 出現手勢 */
+  cursor: pointer;
+  
+}
+
+/* 有上班的上色 */
+#step1:checked ~ .story-pagination label[for="step1"],
+#step2:checked ~ .story-pagination label[for="step2"],
+#step3:checked ~ .story-pagination label[for="step3"],
+#step4:checked ~ .story-pagination label[for="step4"],
+#step5:checked ~ .story-pagination label[for="step5"],
+#step6:checked ~ .story-pagination label[for="step6"],
+#step7a:checked ~ .story-pagination label[for="step7a"],
+#step7b:checked ~ .story-pagination label[for="step7a"],
+#step8:checked ~ .story-pagination label[for="step8"] {
+  background-color: #333;
+}
+
+
+
+/* 負責文字內容*/
+.story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  min-height: 220px;
+}
+
+/* 負責按鈕 */
+.story-btn {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.story-btn label {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+
+
+/* 核心功能 */
+.features {
+  padding: 80px 0;
+  background-color: #FFFAEB;
+}
+
+.features-text {
+  margin-bottom: 40px;
+}
+
+.features-panel {
+  width: 100%;
+  /* margin-bottom: 40px; */
+}
+
+.features-panel > input[type="radio"] {
+  display: none;
+}
+
+.features-list {
+  width: 100%;
+  background-color: #FFF0C2;
+}
+
+.features-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 64px;
+  padding: 20px 16px;
+  border-bottom: 1px solid #e6c76a ;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.features-detail {
+  display: none;
+  padding: 16px 16px 24px;
+  height: 350px;
+  box-sizing: border-box;
+}
+
+.features-detail ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+/* 讓後面多加16px */
+.features-detail p + p {
+  margin-top: 16px;
+}
+
+/* mobile Mockup */
+.features-mobile-preview {
+  width: 100%;
+  height: 200px;
+  margin-top: 24px;
+  background-color: white;
+  border-radius: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-mobile-preview img,
+.preview-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* 電腦版Mockup > 手機隱藏 */
+.features-preview {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  border-radius: 16px;
+
+  display: none;
+}
+
+
+/* 功能 */
+#features1:checked ~ .features-list .features-item:nth-child(1) .features-detail {
+  display: block;
+}
+#features2:checked ~ .features-list .features-item:nth-child(2) .features-detail {
+  display: block;
+}
+#features3:checked ~ .features-list .features-item:nth-child(3) .features-detail {
+  display: block;
+}
+#features4:checked ~ .features-list .features-item:nth-child(4) .features-detail {
+  display: block;
+}
+#features5:checked ~ .features-list .features-item:nth-child(5) .features-detail {
+  display: block;
+}
+#features6:checked ~ .features-list .features-item:nth-child(6) .features-detail {
+  display: block;
+}
+
+.preview-item {
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 電腦版 mockup */
+#features1:checked ~ .features-preview .preview-1 {
+  display: flex;
+}
+#features2:checked ~ .features-preview .preview-2 {
+  display: flex;
+}
+#features3:checked ~ .features-preview .preview-3 {
+  display: flex;
+}
+#features4:checked ~ .features-preview .preview-4 {
+  display: flex;
+}
+#features5:checked ~ .features-preview .preview-5 {
+  display: flex;
+}
+#features6:checked ~ .features-preview .preview-6 {
+  display: flex;
+}
+
+
+
+/* 內容展開 */
+/* 主管換了，不繼續用 */
+/* .features-item input[type="radio"]:checked ~ .features-detail {
+  display: block;
+} */
+
+/* 箭頭翻轉 */
+.features-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* 箭頭翻轉1~6 */
+#features1:checked ~ .features-list .features-item:nth-child(1) .features-arrow {
+  transform: rotate(180deg);
+}
+#features2:checked ~ .features-list .features-item:nth-child(2) .features-arrow {
+  transform: rotate(180deg);
+}
+#features3:checked ~ .features-list .features-item:nth-child(3) .features-arrow {
+  transform: rotate(180deg);
+}
+#features4:checked ~ .features-list .features-item:nth-child(4) .features-arrow {
+  transform: rotate(180deg);
+}
+#features5:checked ~ .features-list .features-item:nth-child(5) .features-arrow {
+  transform: rotate(180deg);
+}
+#features6:checked ~ .features-list .features-item:nth-child(6) .features-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* 工具 */
+.tool {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.tool-text {
+  margin-bottom: 40px;
+}
+
+.tool-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tool-item {
+  width: 100%;
+  padding: 16px;
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background-color: #FFF0C2;
+  border-radius: 16px;
+}
+
+.tool-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tool-number {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  background-color: #FFE699;
+
+  /* 空間變窄時，不會被壓扁 */
+  flex-shrink: 0;
+}
+
+
+/* end+CTA */
+.end {
+  padding: 80px 0;
+  background-color: #FFF0C2;
+}
+
+.end-content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.end-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.end-action button {
+  padding: 12px 20px;
+}
+
+
+
+/* footer */
+.footer {
+  padding: 48px 0;
+  background-color: #2D4C47;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-brand {
+  color: white;
+}
+
+
+
+/* 電腦版 */
+@media screen and (min-width: 1200px) {
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 96px;
+}
+
+  .hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+}
+
+/* 電腦版情境式區 */
+.story-content {
+  width: 45%;
+
+  /* display: flex;
+  flex-direction: column;
+  gap:16px */
+}
+
+/* 不用設定 */
+/* .story-card {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.story-mockup {
+  width: 45%;
+  height: 400px;
+}
+
+.story-page {
+  /* width: 100%; */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* 電腦版核心功能區 */
+.features-panel {
+  display: flex;
+  gap: 6%;
+  align-items: stretch;
+}
+
+.features-preview {
+  width: 50%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-detail {
+  height: 130px;
+}
+
+.features-mobile-preview {
+  display: none;
+}
+
+.features-list {
+  width: 44%;
+}
+
+/* 電腦版工具區 */
+.tool-list {
+  flex-direction: row;
+}
+
+.tool-item {
+  /* 自動平均分配卡片寬度 */
+  flex: 1;
+  min-height: 150px;
+}
+
+
+/* 最後+CTA */
+.end-content {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer */
+.footer-content {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-nav {
+  flex-direction: row;
+  gap: 24px;
+}
+
+
+}
