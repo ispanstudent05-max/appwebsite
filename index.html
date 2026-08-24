@@ -30,13 +30,13 @@
         <nav class="main-nav">
           <ul class="primary-nav">
             <li>
-              <a href="#">功能1</a>
+              <a href="#story">使用情境</a>
             </li>
             <li>
-              <a href="#">減少2</a>
+              <a href="#features">核心功能</a>
             </li>
             <li>
-              <a href="#">開始使用3</a>
+              <a href="#tool">運作方式</a>
             </li>
           </ul>
         </nav>
@@ -55,24 +55,26 @@
               </div>
 
               <div class="hero-btn">
-                <button>體驗情境</button>
-                <button>核心功能</button>
+                <a href="#story">體驗情境</a>
+                <a href="#features">核心功能</a>
               </div>
             </div>
 
             <div class="hero-content-right">
-              <img src="" alt="" />
+
+              <img class="hero_phone phone_left" src="./img/01-手動填入.png" alt="" />
+              <img class="hero_phone phone_right" src="./img/02-導航-6.png" alt="" />
             </div>
           </div>
 
           <div class="hero-banner">
-            <img src="" alt="" />
+            <img class="phone_right" src="" alt="" />
           </div>
         </div>
       </section>
 
       <!-- 情境式box -->
-      <section class="story">
+      <section class="story" id="story">
         <div class="container">
           <div class="story-text">
             <h2>開始這一天</h2>
@@ -109,7 +111,7 @@
 
               <!-- 右邊圖片組 -->
               <div class="story-mockup">
-                mockup
+                <img class="mockup" src="./img/story-01.png" alt="">
                 <!-- story-mockup↓ -->
               </div>
               <!-- story-page↓ -->
@@ -129,7 +131,11 @@
                   <label for="step1">上一步</label>
                 </div>
               </div>
-              <div class="story-mockup">mockup2</div>
+              
+              <div class="story-mockup">
+              <img class="mockup" src="./img/story-02.png" alt="">
+            </div>
+            
             </div>
 
             <!-- 第三頁 -->
@@ -144,7 +150,9 @@
                   <label for="step2">上一步</label>
                 </div>
               </div>
-              <div class="story-mockup">mockup3</div>
+              <div class="story-mockup">
+              <img class="mockup" src="./img/story-03.png" alt="">
+            </div>
             </div>
 
             <!-- 第四頁 -->
@@ -159,7 +167,9 @@
                   <label for="step3">上一步</label>
                 </div>
               </div>
-              <div class="story-mockup">mockup4</div>
+              <div class="story-mockup">
+              <img class="mockup" src="./img/story-04.png" alt="">
+            </div>
             </div>
 
             <!-- 第五頁 -->
@@ -174,7 +184,9 @@
                   <label for="step4">上一步</label>
                 </div>
               </div>
-              <div class="story-mockup">mockup5</div>
+              <div class="story-mockup">
+              <img class="mockup" src="./img/story-05.png" alt="">
+            </div>
             </div>
 
             <!-- 第六頁 -->
@@ -189,7 +201,9 @@
                   <label for="step5">上一步</label>
                 </div>
               </div>
-              <div class="story-mockup">mockup6</div>
+              <div class="story-mockup">
+              <img class="mockup" src="./img/story-06.png" alt="">
+            </div>
             </div>
 
             <!-- 第七頁 a -->
@@ -207,7 +221,9 @@
                 </div>
               </div>
 
-              <div class="story-mockup">mockup7</div>
+              <div class="story-mockup">
+              <img class="mockup" src="./img/story-02.png" alt="">
+            </div>
             </div>
 
             <!-- 第七頁 b -->
@@ -225,8 +241,8 @@
                 
               </div>
               <div class="story-mockup">
-                mockup7
-              </div>
+              <img class="mockup" src="./img/story-02.png" alt="">
+            </div>
              </div>
 
             <!-- 第八頁 -->
@@ -241,7 +257,9 @@
                   <label for="step1">從頭開始</label>
                 </div>
               </div>
-              <div class="story-mockup">mockup8</div>
+              <div class="story-mockup">
+              <img class="mockup" src="./img/story-08.png" alt="">
+            </div>
             </div>
 
             <!-- 頁面進度 / 導航部門 -->
@@ -264,7 +282,7 @@
       </section>
 
       <!-- 核心功能 -->
-      <section class="features">
+      <section class="features" id="features">
         <div class="container">
           <div class="features-text">
             <p>CORE FEATURES</p>
@@ -282,11 +300,54 @@
 
             <!-- 左邊功能選單 -->
             <div class="features-list">
-              <!-- 功能 1 -->
+
+              <!-- 功能 1 -->              
               <div class="features-item">
                 <label for="features1" class="features-title">
+                  <span>快速建立任務</span>
+
+                <span class="features-icon">
+                  <span class="features-arrow">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </span>
+                  <span class="features-up">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </span>
+                </span>
+
+                </label>
+
+                <div class="features-detail">
+                  <p>用平常說話的方式，就能把事情記下來。</p>
+                  <!-- <p>詳細內容</p> -->
+
+                  <ul>
+                    <li>支援自然語言輸入</li>
+                    <li>自動辨識時間與地點</li>
+                    <li>辨識後可再次確認修改</li>
+                  </ul>
+
+
+                  <!-- mobile Mockup -->
+                  <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
+                </div>
+              </div>
+
+
+              <!-- 功能 2 -->
+              <div class="features-item">
+                <label for="features2" class="features-title">
                   <span>情境式提醒</span>
-                  <span class="features-arrow">⌄</span>
+
+                <span class="features-icon">
+                  <span class="features-arrow">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </span>
+                  <span class="features-up">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </span>
+                </span>
+
                 </label>
 
                 <div class="features-detail">
@@ -300,31 +361,9 @@
                     <li>預估車程安排出發提醒</li>
                     <li>路況明顯變化追加通知</li>
                   </ul>
-
+              
                   <!-- mobile Mockup -->
-                  <div class="features-mobile-preview">mockup-1</div>
-                </div>
-              </div>
-
-              <!-- 功能 2 -->
-              <div class="features-item">
-                <label for="features2" class="features-title">
-                  <span>快速建立任務</span>
-                  <span class="features-arrow">⌄</span>
-                </label>
-
-                <div class="features-detail">
-                  <p>用平常說話的方式，就能把事情記下來。</p>
-                  <!-- <p>詳細內容</p> -->
-
-                  <ul>
-                    <li>支援自然語言輸入</li>
-                    <li>自動辨識時間與地點</li>
-                    <li>辨識後可再次確認修改</li>
-                  </ul>
-
-                  <!-- mobile Mockup -->
-                  <div class="features-mobile-preview">mockup-2</div>
+                  <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
                 </div>
               </div>
 
@@ -332,7 +371,15 @@
               <div class="features-item">
                 <label for="features3" class="features-title">
                   <span>任務 × 導航</span>
-                  <span class="features-arrow">⌄</span>
+
+                <span class="features-icon">
+                  <span class="features-arrow">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </span>
+                  <span class="features-up">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </span>
+                </span>
                 </label>
 
                 <div class="features-detail">
@@ -345,7 +392,7 @@
                     <li>從任務直接開始導航</li>
                   </ul>
                   <!-- mobile Mockup -->
-                  <div class="features-mobile-preview">mockup-3</div>
+                  <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
                 </div>
               </div>
 
@@ -353,7 +400,15 @@
               <div class="features-item">
                 <label for="features4" class="features-title">
                   <span>路況變化提醒</span>
-                  <span class="features-arrow">⌄</span>
+
+                <span class="features-icon">
+                  <span class="features-arrow">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </span>
+                  <span class="features-up">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </span>
+                </span>
                 </label>
 
                 <div class="features-detail">
@@ -366,7 +421,7 @@
                     <li>重要變化才追加通知</li>
                   </ul>
                   <!-- mobile Mockup -->
-                  <div class="features-mobile-preview">mockup-4</div>
+                  <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
                 </div>
               </div>
 
@@ -374,7 +429,15 @@
               <div class="features-item">
                 <label for="features5" class="features-title">
                   <span>地點情境提醒</span>
-                  <span class="features-arrow">⌄</span>
+
+                <span class="features-icon">
+                  <span class="features-arrow">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </span>
+                  <span class="features-up">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </span>
+                </span>
                 </label>
 
                 <div class="features-detail">
@@ -387,7 +450,7 @@
                     <li>減少過早提醒後遺忘</li>
                   </ul>
                   <!-- mobile Mockup -->
-                  <div class="features-mobile-preview">mockup-5</div>
+                  <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
                 </div>
               </div>
 
@@ -395,7 +458,15 @@
               <div class="features-item">
                 <label for="features6" class="features-title">
                   <span>遺漏任務通知</span>
-                  <span class="features-arrow">⌄</span>
+
+                <span class="features-icon">
+                  <span class="features-arrow">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </span>
+                  <span class="features-up">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </span>
+                </span>
                 </label>
 
                 <div class="features-detail">
@@ -408,24 +479,24 @@
                     <li>銜接下一個任務行動</li>
                   </ul>
                   <!-- mobile Mockup -->
-                  <div class="features-mobile-preview">mockup-6</div>
+                  <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
                 </div>
               </div>
             </div>
 
             <!-- 右邊Mockup -->
             <div class="features-preview">
-              <div class="preview-item preview-1">Mockup-1</div>
+              <div class="preview-item preview-1"><img src="./img/功能-01.png" alt=""></div>
 
-              <div class="preview-item preview-2">Mockup-2</div>
+              <div class="preview-item preview-2"><img src="./img/功能-02.png" alt=""></div>
 
-              <div class="preview-item preview-3">Mockup-3</div>
+              <div class="preview-item preview-3"><img src="./img/功能-03.png" alt=""></div>
 
-              <div class="preview-item preview-4">Mockup-4</div>
+              <div class="preview-item preview-4"><img src="./img/功能-04.png" alt=""></div>
 
-              <div class="preview-item preview-5">Mockup-5</div>
+              <div class="preview-item preview-5"><img src="./img/功能-05.png" alt=""></div>
 
-              <div class="preview-item preview-6">Mockup-6</div>
+              <div class="preview-item preview-6"><img src="./img/功能-01.png" alt=""></div>
 
               <!-- features-preview ↓ -->
             </div>
@@ -438,7 +509,7 @@
       </section>
 
       <!-- 工具 -->
-      <section class="tool">
+      <section class="tool" id="tool">
         <div class="container">
           <div class="tool-text">
             <p>REDUCE APP SWITCHING</p>
@@ -517,9 +588,9 @@
           </div>
 
           <nav class="footer-nav">
-            <a href="#">核心功能</a>
-            <a href="#">使用情境</a>
-            <a href="#">開始使用</a>
+            <a href="#story">使用情境</a>
+            <a href="#features">核心功能</a>
+            <a href="#tool">運作方式</a>
           </nav>
         </div>
       </div>

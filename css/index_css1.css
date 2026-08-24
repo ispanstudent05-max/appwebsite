@@ -5,16 +5,34 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.story,
+.features,
+.tool {
+  scroll-margin-top: 140px;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+
+
 /* header */
 .header {
   height: 100px;
   background-color: #2D4C47;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .header .container {
@@ -42,52 +60,92 @@
 .primary-nav {
   list-style: none;
   display: flex;
-  gap: 24px;
-  
+  gap: 50px;
+  transition: 0.5s;
 }
 
 .primary-nav a {
   color: white;
   text-decoration: none;
+  
+}
+
+.primary-nav a:hover {
+  border-bottom: 2px solid white;
+  
 }
 
 /* 第一區塊 */
 .hero {
-  padding: 80px 0;
-  background-color: #FFFAEB;
+  padding: 180px 0 40px;
+  /* background-color: #FFFAEB; */
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 60px;
 }
 
+/* .hero-content-left {
+  justify-content: center;
+  aign-items: center;
+} */
+
+.hero-text {
+  max-width: 500px;
+  /* width: 70%; */
+}
 
 .hero-content-right {
-  width: 100%;
-  height: 300px;
-  background-color: #00ffd5;
+  /* background-color: white; */
   /* 防止圖片超出 */
-  overflow: hidden;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
 }
+
+.hero_phone {
+  width: 45%;
+  height:auto;
+  display: block;
+}
+
+.phone_right {
+  margin-top: 40px;
+}
+
 
 .hero-btn {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   padding-top: 20px;
+  
 }
 
-.hero-btn button {
+.hero-btn a {
+  color: #333;
+  text-decoration: none;
+  background-color: #FFF0C2;
   padding: 12px 20px;
+  border-radius: 8px;
 }
+
+.hero-btn a:hover {
+  background-color: #FFE699;
+  transition: 0.3s;
+}
+
+/* .hero-btn button {
+  padding: 12px 20px;
+} */
 
 /* 情境式 */
 
 .story {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: #ffffff;
 }
 .story-text {
@@ -101,10 +159,11 @@
 .story-card {
   background-color: #FFF0C2;
   width: 100%;
-  min-height: 500px;
+  min-height: 550px;
   border-radius: 20px;
   /* border: 1px solid #333; */
   padding: 24px;
+  /* padding-top: 60px; */
 }
 
 /* 負責把切頁開關藏起來 */
@@ -118,10 +177,26 @@
 /* 圖片框 */
 .story-mockup {
   width: 100%;
-  height: 300px;
-  background-color: white;
-  border-radius: 16px;
-  overflow: hidden;
+  height: auto;
+  /* background-color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow:visible */
+  /* margin-top: 30px; */
+}
+
+.mockup {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.story-mockup .mockup {
+  width: 65%;
+  height: auto;
 }
 
 /* 負責每一頁排列 */
@@ -167,6 +242,7 @@
   gap: 8px;
   margin-top: 24px;
   justify-content: flex-start;
+  display:none;
 }
 
 .story-pagination label {
@@ -202,7 +278,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-
   min-height: 220px;
 }
 
@@ -212,6 +287,7 @@
   display: flex;
   gap: 12px;
   justify-content: flex-start;
+  
 }
 
 .story-btn label {
@@ -220,14 +296,19 @@
   border: 1px solid #333;
   border-radius: 8px;
   cursor: pointer;
+  background-color: #FFFAEB;
   
 }
 
+.story-btn label:hover {
+  background-color: #FFE699;
+  transition: 0.3s;
+}
 
 /* 核心功能 */
 .features {
-  padding: 80px 0;
-  background-color: #FFFAEB;
+  padding: 40px 0;
+  /* background-color: #FFFAEB; */
 }
 
 .features-text {
@@ -245,6 +326,7 @@
 
 .features-list {
   width: 100%;
+  height: auto;
   background-color: #FFF0C2;
 }
 
@@ -263,7 +345,7 @@
 .features-detail {
   display: none;
   padding: 16px 16px 24px;
-  height: 350px;
+  height: 410px;
   box-sizing: border-box;
 }
 
@@ -280,9 +362,9 @@
 /* mobile Mockup */
 .features-mobile-preview {
   width: 100%;
-  height: 200px;
+  height: 260px;
   margin-top: 24px;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 16px;
 
   display: flex;
@@ -301,7 +383,7 @@
 .features-preview {
   width: 100%;
   height: 300px;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 16px;
 
   display: none;
@@ -366,13 +448,13 @@
 } */
 
 /* 箭頭翻轉 */
-.features-arrow {
+/* .features-arrow {
   display: inline-block;
   transition: transform 0.3s ease;
-}
+} */
 
 /* 箭頭翻轉1~6 */
-#features1:checked ~ .features-list .features-item:nth-child(1) .features-arrow {
+/* #features1:checked ~ .features-list .features-item:nth-child(1) .features-arrow {
   transform: rotate(180deg);
 }
 #features2:checked ~ .features-list .features-item:nth-child(2) .features-arrow {
@@ -389,12 +471,60 @@
 }
 #features6:checked ~ .features-list .features-item:nth-child(6) .features-arrow {
   transform: rotate(180deg);
+} */
+
+/* 箭頭更新 */
+.features-arrow {
+  display: inline-block;
 }
+
+.features-up {
+  display:none;
+}
+
+/* 被選到的 */
+#features1:checked ~ .features-list .features-item:nth-child(1) .features-arrow {
+  display:none;
+}
+#features1:checked ~ .features-list .features-item:nth-child(1) .features-up {
+  display:block;
+}
+#features2:checked ~ .features-list .features-item:nth-child(2) .features-arrow {
+  display:none;
+}
+#features2:checked ~ .features-list .features-item:nth-child(2) .features-up {
+  display:block;
+}
+#features3:checked ~ .features-list .features-item:nth-child(3) .features-arrow {
+  display:none;
+}
+#features3:checked ~ .features-list .features-item:nth-child(3) .features-up {
+  display:block;
+}
+#features4:checked ~ .features-list .features-item:nth-child(4) .features-arrow {
+  display:none;
+}
+#features4:checked ~ .features-list .features-item:nth-child(4) .features-up {
+  display:block;
+}
+#features5:checked ~ .features-list .features-item:nth-child(5) .features-arrow {
+  display:none;
+}
+#features5:checked ~ .features-list .features-item:nth-child(5) .features-up {
+  display:block;
+}
+#features6:checked ~ .features-list .features-item:nth-child(6) .features-arrow {
+  display:none;
+}
+#features6:checked ~ .features-list .features-item:nth-child(6) .features-up {
+  display:block;
+}
+
 
 
 /* 工具 */
 .tool {
-  padding: 80px 0;
+  padding: 40px 0 80px;
   background-color: white;
 }
 
@@ -413,19 +543,22 @@
   width: 100%;
   padding: 16px;
   min-height: 72px;
-
+  
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 
-  background-color: #FFF0C2;
+  background-color: #FFFAEB;
   border-radius: 16px;
 }
 
 .tool-item-text {
+  width: 120px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  /* text-align:center; */
 }
 
 .tool-number {
@@ -441,6 +574,8 @@
 
   /* 空間變窄時，不會被壓扁 */
   flex-shrink: 0;
+
+  font-weight: bold;
 }
 
 
@@ -453,15 +588,17 @@
 .end-content {
   width: 100%;
 
-  display: flex;
   flex-direction: column;
   gap: 32px;
+  display: flex;
+  align-items: center;
 }
 
 .end-text {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  
 }
 
 .end-action button {
@@ -480,23 +617,31 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: center;
 }
 
 .footer-nav {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  align-items: center;
 }
 
 .footer-nav a {
   text-decoration: none;
   color: white;
+}
+
+.footer-nav a:hover {
+  border-bottom: 2px solid white;
+  transition: 0.5s;
 }
 
 .footer-brand {
@@ -516,6 +661,7 @@
 
   .hero-content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -530,7 +676,8 @@
 
 /* 電腦版情境式區 */
 .story-content {
-  width: 45%;
+  width: 40%;
+  margin: 50px;
 
   /* display: flex;
   flex-direction: column;
@@ -545,8 +692,16 @@
 } */
 
 .story-mockup {
-  width: 45%;
-  height: 400px;
+  width: 55%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-mockup .mockup {
+  height: 100%;
+  width: auto;
 }
 
 .story-page {
@@ -556,17 +711,21 @@
   align-items: center;
 }
 
+/* .story-pagination {
+  display:none;
+} */
+
 
 /* 電腦版核心功能區 */
 .features-panel {
   display: flex;
-  gap: 6%;
-  align-items: stretch;
+  gap: 8%;
+  align-items: flex-start;
 }
 
 .features-preview {
-  width: 50%;
-  height: auto;
+  width: 42%;
+  height: 520px;
 
   display: flex;
   justify-content: center;
@@ -582,7 +741,23 @@
 }
 
 .features-list {
-  width: 44%;
+  width: 42%;
+  height: 520px;
+}
+
+.preview-item {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* 電腦版工具區 */
@@ -613,6 +788,10 @@
 .footer-nav {
   flex-direction: row;
   gap: 24px;
+}
+
+.footer-brand {
+  align-items: flex-start;
 }
 
 
