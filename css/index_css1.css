@@ -242,7 +242,7 @@ html {
 }
 
 .story-mockup .mockup {
-  width: 65%;
+  width: 45%;
   height: auto;
 }
 
@@ -475,7 +475,7 @@ label.stbtn2 {
 .features-detail {
   display: none;
   padding: 16px 16px 24px;
-  height: 410px;
+  height: 440px;
   box-sizing: border-box;
   /* border-bottom: 1px solid #FFE699 ; */
 }
