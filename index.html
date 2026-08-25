@@ -13,6 +13,11 @@
     />
 
     <link rel="stylesheet" href="./css/index_css1.css" />
+
+    <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- 導覽列 -->
@@ -21,7 +26,7 @@
         <div class="logo">
           <a href="">
             <img src="" alt="" />
-            logo
+            Daymate
           </a>
         </div>
         <div class="menu-icon">
@@ -30,13 +35,13 @@
         <nav class="main-nav">
           <ul class="primary-nav">
             <li>
-              <a href="#story">使用情境</a>
+              <a href="#story"><i class="fa-solid fa-play"></i> 使用情境</a>
             </li>
             <li>
-              <a href="#features">核心功能</a>
+              <a href="#features"><i class="fa-solid fa-layer-group"></i> 核心功能</a>
             </li>
             <li>
-              <a href="#tool">運作方式</a>
+              <a href="#tool"><i class="fa-solid fa-diagram-project"></i> 運作方式</a>
             </li>
           </ul>
         </nav>
@@ -55,8 +60,8 @@
               </div>
 
               <div class="hero-btn">
-                <a href="#story">體驗情境</a>
-                <a href="#features">核心功能</a>
+                <a href="#story"><i class="fa-solid fa-play"></i> 體驗情境</a>
+                <a class="btns" href="#features"><i class="fa-solid fa-layer-group"></i> 核心功能</a>
               </div>
             </div>
 
@@ -77,8 +82,14 @@
       <section class="story" id="story">
         <div class="container">
           <div class="story-text">
-            <h2>開始這一天</h2>
-            <p>假設今晚和朋友有約，看看接下來會發生什麼。</p>
+
+            <h6 class="story-icon"><i class="fa-solid fa-play"></i>
+            </h6>
+
+            <div>
+            <h1>開始這一天</h1>
+            <p>今晚和朋友有約，但今天要處理的事，好像不只這一件。</p>
+          </div>
           </div>
 
           <!-- 卡片經理 -->
@@ -97,12 +108,13 @@
             <!-- 第一頁 -->
             <div class="story-page page-1">
               <div class="story-content">
-                <h3>10:30</h3>
+                <img class="pic" src="./img/p1.svg" alt="">
+                <h4>10:30</h4>
                 <h3>今晚，跟 Abby 約了吃拉麵。</h3>
                 <p>想到行程就先記下來，晚點不用再惦記幾點該出門。</p>
 
                 <div class="story-btn">
-                  <label for="step2">下一步 </label>
+                  <label for="step2" class="stbtn">下一步 <i class="fa-solid fa-arrow-right"></i></label>
                   <!-- story-btn↓ -->
                 </div>
 
@@ -111,7 +123,7 @@
 
               <!-- 右邊圖片組 -->
               <div class="story-mockup">
-                <img class="mockup" src="./img/story-01.png" alt="">
+                <img class="mockup" src="./img/s1.png" alt="">
                 <!-- story-mockup↓ -->
               </div>
               <!-- story-page↓ -->
@@ -120,20 +132,22 @@
             <!-- 第二頁 -->
             <div class="story-page page-2">
               <div class="story-content">
-                <h3>17:15</h3>
+                <img class="pic" src="./img/p2.svg" alt="">
+                <h4>17:35</h4>
                 <h3>差不多該出發了。</h3>
                 <p>
                   看了一下時間和車程，現在出門，剛剛好。
                 </p>
 
                 <div class="story-btn">
-                  <label for="step3">下一步</label>
+                  
                   <label for="step1">上一步</label>
+                  <label for="step3" class="stbtn">下一步 <i class="fa-solid fa-arrow-right"></i></label>
                 </div>
               </div>
               
               <div class="story-mockup">
-              <img class="mockup" src="./img/story-02.png" alt="">
+              <img class="mockup" src="./img/s2.png" alt="">
             </div>
             
             </div>
@@ -141,124 +155,136 @@
             <!-- 第三頁 -->
             <div class="story-page page-3">
               <div class="story-content">
-                <h3>17:20</h3>
+                <img class="pic" src="./img/p3.svg" alt="">
+                <h4>17:35</h4>
                 <h3>接下來，跟著走就好。</h3>
                 <p>目的地已經接上，不用再開地圖重新找一次。</p>
 
                 <div class="story-btn">
-                  <label for="step4">下一步</label>
+                  
                   <label for="step2">上一步</label>
+                  <label for="step4" class="stbtn">下一步 <i class="fa-solid fa-arrow-right"></i></label>
                 </div>
               </div>
               <div class="story-mockup">
-              <img class="mockup" src="./img/story-03.png" alt="">
+              <img class="mockup" src="./img/s3.png" alt="">
             </div>
             </div>
 
             <!-- 第四頁 -->
             <div class="story-page page-4">
               <div class="story-content">
-                <h3>17:35</h3>
+                <img class="pic" src="./img/p4.svg" alt="">
+                <h4>17:35</h4>
                 <h3>咦，好像塞車了。</h3>
                 <p>車程比原本多了 15 分鐘以上，這次系統才再次提醒。</p>
 
                 <div class="story-btn">
-                  <label for="step5">下一步</label>
+                  
                   <label for="step3">上一步</label>
+                  <label for="step5" class="stbtn">下一步 <i class="fa-solid fa-arrow-right"></i></label>
                 </div>
               </div>
               <div class="story-mockup">
-              <img class="mockup" src="./img/story-04.png" alt="">
+              <img class="mockup" src="./img/s4.png" alt="" alt="">
             </div>
             </div>
 
             <!-- 第五頁 -->
             <div class="story-page page-5">
               <div class="story-content">
-                <h3>17:58</h3>
+                <img class="pic" src="./img/p5.svg" alt="">
+                <h4>18:00</h4>
                 <h3>到餐廳了</h3>
                 <p>順利抵達目的地，導航先告一段落，接下來好好吃飯。</p>
 
                 <div class="story-btn">
-                  <label for="step6">下一步</label>
+                  
                   <label for="step4">上一步</label>
+                  <label for="step6" class="stbtn">下一步 <i class="fa-solid fa-arrow-right"></i></label>
                 </div>
               </div>
               <div class="story-mockup">
-              <img class="mockup" src="./img/story-05.png" alt="">
+              <img class="mockup" src="./img/s5.png" alt="" alt="">
             </div>
             </div>
 
             <!-- 第六頁 -->
             <div class="story-page page-6">
               <div class="story-content">
-                <h3>19:20</h3>
+                <img class="pic" src="./img/p6.svg" alt="">
+                <h4>19:00</h4>
                 <h3>吃飽了，今天也差不多啦。</h3>
                 <p>跟 Abby 吃完飯、聊完天，這趟行程也順利完成了。</p>
 
                 <div class="story-btn">
-                  <label for="step7a">下一步</label>
+                  
                   <label for="step5">上一步</label>
+                  <label for="step7a" class="stbtn">下一步 <i class="fa-solid fa-arrow-right"></i></label>
                 </div>
               </div>
               <div class="story-mockup">
-              <img class="mockup" src="./img/story-06.png" alt="">
+              <img class="mockup" src="./img/s6.png" alt="">
             </div>
             </div>
 
             <!-- 第七頁 a -->
             <div class="story-page page-7a">
               <div class="story-content">
-                <h3>19:22</h3>
+                <img class="pic" src="./img/p7.svg" alt="">
+                <h4>19:00</h4>
                 <h3>回家休息追劇吧！</h3>
                 <p>收好東西準備離開，今天的事情都處理好了。</p>
 
 
                 <!-- 一開始顯示按鈕 -->
                 <div class="story-btn">
-                  <label for="step7b">結束</label>
+                  
                   <label for="step6">上一步</label>
+                  <label for="step7b" class="stbtn2">結束</label>
                 </div>
               </div>
 
               <div class="story-mockup">
-              <img class="mockup" src="./img/story-02.png" alt="">
+              <img class="mockup" src="./img/s6.png" alt="">
             </div>
             </div>
 
             <!-- 第七頁 b -->
              <div class="story-page page-7b">
               <div class="story-content">
-                <h3>19:22</h3>
+                <img class="pic" src="./img/p8.svg" alt="">
+                <h4>19:00</h4>
                 <h3>回家休息追劇吧！</h3>
                 <p>收好東西準備離開，今天的事情都處理好了。</p>
-                <p>等一下...</p>
+                <p class="smallfont">等一下...</p>
 
                 <div class="story-btn">
                   
-                  <label for="step8">是不是還有一件事沒做?</label>
+                  <label for="step8" class="stbtn2">是不是還有一件事沒做?</label>
                 </div>
                 
               </div>
               <div class="story-mockup">
-              <img class="mockup" src="./img/story-02.png" alt="">
+              <img class="mockup" src="./img/s6.png" alt="">
             </div>
              </div>
 
             <!-- 第八頁 -->
             <div class="story-page page-8">
               <div class="story-content">
-                <h3>19:23</h3>
+                <img class="pic" src="./img/p9.svg" alt="">
+                <h4>19:05</h4>
                 <h3>還記得「領包裹」嗎？</h3>
                 <p>還好，有些小事不用一直記在腦袋裡。該想起來的時候，它會再出現。</p>
 
                 <div class="story-btn">
                   <label for="step7a">上一步</label>
-                  <label for="step1">從頭開始</label>
+                  <label for="step1" class="stbtn">從頭開始</label>
                 </div>
               </div>
               <div class="story-mockup">
-              <img class="mockup" src="./img/story-08.png" alt="">
+              <img class="mockup" src="./img/s7.png" alt="">
             </div>
             </div>
 
@@ -285,9 +311,13 @@
       <section class="features" id="features">
         <div class="container">
           <div class="features-text">
-            <p>CORE FEATURES</p>
-            <h2>從記下來，到真的做到。</h2>
+            <!-- <p>CORE FEATURES</p> -->
+             
+            <h6 class="features-main-icon"><i class="fa-solid fa-layer-group"></i></h6>
+            <div>
+            <h1> 從記下來，到真的做到。</h1>
             <p>六個核心功能，把任務、提醒與移動接在一起。</p>
+          </div>
           </div>
 
           <div class="features-panel">
@@ -304,7 +334,7 @@
               <!-- 功能 1 -->              
               <div class="features-item">
                 <label for="features1" class="features-title">
-                  <span>快速建立任務</span>
+                  <span class="b"><i class="fa-regular fa-rectangle-list"></i> 快速建立任務</span>
 
                 <span class="features-icon">
                   <span class="features-arrow">
@@ -322,9 +352,9 @@
                   <!-- <p>詳細內容</p> -->
 
                   <ul>
-                    <li>支援自然語言輸入</li>
+                    <li>自然語言／語音快速輸入</li>
                     <li>自動辨識時間與地點</li>
-                    <li>辨識後可再次確認修改</li>
+                    <li>辨識後確認與修改</li>
                   </ul>
 
 
@@ -337,7 +367,7 @@
               <!-- 功能 2 -->
               <div class="features-item">
                 <label for="features2" class="features-title">
-                  <span>情境式提醒</span>
+                  <span class="b"><i class="fa-regular fa-bell"></i> 任務管理</span>
 
                 <span class="features-icon">
                   <span class="features-arrow">
@@ -352,14 +382,14 @@
 
                 <div class="features-detail">
                   <p>
-                    不只看時間，也看你現在在哪、怎麼移動。
+                    今天該做什麼，照著當下狀態自然往下走。
                   </p>
                   <!-- <p>詳細內容</p> -->
 
                   <ul>
-                    <li>依位置與時間判斷提醒</li>
-                    <li>預估車程安排出發提醒</li>
-                    <li>路況明顯變化追加通知</li>
+                    <li>集中管理今日任務</li>
+                    <li>完成任務自動整理</li>
+                    <li>逾時或下一個任務依狀態調整</li>
                   </ul>
               
                   <!-- mobile Mockup -->
@@ -370,7 +400,36 @@
               <!-- 功能 3 -->
               <div class="features-item">
                 <label for="features3" class="features-title">
-                  <span>任務 × 導航</span>
+                  <span class="b"><i class="fa-solid fa-map-location-dot"></i> 情境提醒</span>
+
+                <span class="features-icon">
+                  <span class="features-arrow">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </span>
+                  <span class="features-up">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </span>
+                </span>
+                </label>
+
+                <div class="features-detail">
+                  <p>不只看時間，而是判斷什麼時候真的需要提醒。</p>
+                  <!-- <p>詳細內容</p> -->
+
+                  <ul>
+                    <li>結合時間、位置與交通狀況</li>
+                    <li>依車程判斷出發時間</li>
+                    <li>路況明顯變化才追加通知</li>
+                  </ul>
+                  <!-- mobile Mockup -->
+                  <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
+                </div>
+              </div>
+
+              <!-- 功能 4 -->
+              <div class="features-item">
+                <label for="features4" class="features-title">
+                  <span class="b"><i class="fa-solid fa-route"></i> 任務 × 導航</span>
 
                 <span class="features-icon">
                   <span class="features-arrow">
@@ -396,39 +455,10 @@
                 </div>
               </div>
 
-              <!-- 功能 4 -->
-              <div class="features-item">
-                <label for="features4" class="features-title">
-                  <span>路況變化提醒</span>
-
-                <span class="features-icon">
-                  <span class="features-arrow">
-                    <i class="fa-solid fa-caret-down"></i>
-                  </span>
-                  <span class="features-up">
-                    <i class="fa-solid fa-caret-up"></i>
-                  </span>
-                </span>
-                </label>
-
-                <div class="features-detail">
-                  <p>路上真的有變化，才再次提醒你。</p>
-                  <!-- <p>詳細內容</p> -->
-
-                  <ul>
-                    <li>持續更新預估車程</li>
-                    <li>車程增加15分鐘才提醒</li>
-                    <li>重要變化才追加通知</li>
-                  </ul>
-                  <!-- mobile Mockup -->
-                  <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
-                </div>
-              </div>
-
               <!-- 功能 5 -->
               <div class="features-item">
                 <label for="features5" class="features-title">
-                  <span>地點情境提醒</span>
+                  <span class="b"><i class="fa-solid fa-list-check"></i> 抵達後接續任務</span>
 
                 <span class="features-icon">
                   <span class="features-arrow">
@@ -441,12 +471,12 @@
                 </label>
 
                 <div class="features-detail">
-                  <p>到了對的地方，再想起該做的事。</p>
+                  <p>到了目的地，下一件該做的事自然出現。</p>
                   <!-- <p>詳細內容</p> -->
 
                   <ul>
-                    <li>依抵達位置觸發提醒</li>
-                    <li>支援目的地任務提醒</li>
+                    <li>抵達位置判斷、顯示目的地相關任務</li>
+                    <li>採買／待辦清單可直接勾選</li>
                     <li>減少過早提醒後遺忘</li>
                   </ul>
                   <!-- mobile Mockup -->
@@ -457,7 +487,7 @@
               <!-- 功能 6 -->
               <div class="features-item">
                 <label for="features6" class="features-title">
-                  <span>遺漏任務通知</span>
+                  <span class="b"><i class="fa-regular fa-clipboard"></i> 未完成任務紀錄</span>
 
                 <span class="features-icon">
                   <span class="features-arrow">
@@ -470,13 +500,12 @@
                 </label>
 
                 <div class="features-detail">
-                  <p>以為結束了，也不讓小事被落下。</p>
+                  <p>行程結束了，也不讓還沒做完的事情被忘記。</p>
                   <!-- <p>詳細內容</p> -->
 
                   <ul>
-                    <li>檢查尚未完成的任務</li>
-                    <li>適當時機重新帶回任務</li>
-                    <li>銜接下一個任務行動</li>
+                    <li>檢查未完成任務、在適當情境重新帶回</li>
+                    <li>接續下一個任務行動</li>
                   </ul>
                   <!-- mobile Mockup -->
                   <div class="features-mobile-preview"><img src="./img/功能-01.png" alt=""></div>
@@ -488,15 +517,15 @@
             <div class="features-preview">
               <div class="preview-item preview-1"><img src="./img/功能-01.png" alt=""></div>
 
-              <div class="preview-item preview-2"><img src="./img/功能-02.png" alt=""></div>
+              <div class="preview-item preview-2"><img src="./img/f2.svg" alt=""></div>
 
-              <div class="preview-item preview-3"><img src="./img/功能-03.png" alt=""></div>
+              <div class="preview-item preview-3"><img src="./img/s2.svg" alt=""></div>
 
-              <div class="preview-item preview-4"><img src="./img/功能-04.png" alt=""></div>
+              <div class="preview-item preview-4"><img src="./img/s3.svg" alt=""></div>
 
               <div class="preview-item preview-5"><img src="./img/功能-05.png" alt=""></div>
 
-              <div class="preview-item preview-6"><img src="./img/功能-01.png" alt=""></div>
+              <div class="preview-item preview-6"><img src="./img/s1.svg" alt=""></div>
 
               <!-- features-preview ↓ -->
             </div>
@@ -512,14 +541,14 @@
       <section class="tool" id="tool">
         <div class="container">
           <div class="tool-text">
-            <p>REDUCE APP SWITCHING</p>
-            <h2>一個任務，不必在不同工具之間來回切換。</h2>
+            <!-- <p>REDUCE APP SWITCHING</p> -->
+            <h1>一個任務，不必在不同工具之間來回切換。</h1>
             <p>重點不是取代每一個工具，而是把原本分散的任務執行流程接起來。</p>
           </div>
 
           <div class="tool-list">
             <div class="tool-item">
-              <div class="tool-number">01</div>
+              <div class="tool-number"><i class="fa-solid fa-pen fa-xl"></i></div>
               <div class="tool-item-text">
                 <h3>記下任務</h3>
                 <p>待辦／筆記</p>
@@ -527,7 +556,7 @@
             </div>
 
             <div class="tool-item">
-              <div class="tool-number">02</div>
+              <div class="tool-number"><i class="fa-solid fa-clock fa-xl"></i></div>
               <div class="tool-item-text">
                 <h3>確認時間</h3>
                 <p>行事曆</p>
@@ -535,7 +564,7 @@
             </div>
 
             <div class="tool-item">
-              <div class="tool-number">03</div>
+              <div class="tool-number"><i class="fa-solid fa-location-dot fa-xl"></i></div>
               <div class="tool-item-text">
                 <h3>找地點</h3>
                 <p>地圖</p>
@@ -543,7 +572,7 @@
             </div>
 
             <div class="tool-item">
-              <div class="tool-number">04</div>
+              <div class="tool-number"><i class="fa-solid fa-map fa-xl"></i></div>
               <div class="tool-item-text">
                 <h3>查路程</h3>
                 <p>交通資訊</p>
@@ -551,7 +580,7 @@
             </div>
 
             <div class="tool-item">
-              <div class="tool-number">05</div>
+              <div class="tool-number"><i class="fa-solid fa-location-arrow fa-xl"></i></div>
               <div class="tool-item-text">
                 <h3>開始導航</h3>
                 <p>導航工具</p>
@@ -566,12 +595,12 @@
         <div class="container">
           <div class="end-content">
             <div class="end-text">
-              <h2>把下一步，自然接起來。</h2>
-              <p>產品上線狀態／下載方式｜待確認</p>
+              <h2>把下一步，自然接起來 <i class="fa-solid fa-right-long"></i></h2>
+              <!-- <p>產品上線狀態／下載方式｜待確認</p> -->
             </div>
             <!-- CTA -->
             <div class="end-action">
-              <button>開始使用</button>
+              <p>開始使用</p>
             </div>
           </div>
         </div>
@@ -583,14 +612,14 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
-            <p>APP名稱</p>
+            <p>Daymate</p>
             <p>讓任務從記下來，到真正完成。</p>
           </div>
 
           <nav class="footer-nav">
-            <a href="#story">使用情境</a>
-            <a href="#features">核心功能</a>
-            <a href="#tool">運作方式</a>
+            <a href="#story"><i class="fa-solid fa-play"></i> 使用情境</a>
+            <a href="#features"><i class="fa-solid fa-layer-group"></i> 核心功能</a>
+            <a href="#tool"><i class="fa-solid fa-diagram-project"></i> 運作方式</a>
           </nav>
         </div>
       </div>
